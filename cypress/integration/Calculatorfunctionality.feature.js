@@ -1,6 +1,6 @@
 describe('User can calculate using two numbers', () => {
   beforeEach(() => {
-    cy.get('/');
+    cy.visit('/');
   });
   it('is expected to add two numbers', () => {
     cy.get('[data-cy=title]').should('contain','Adding Two Numbers')

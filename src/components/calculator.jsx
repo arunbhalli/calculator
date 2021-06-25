@@ -19,15 +19,15 @@ const Calculator = () => {
           data-cy='num1'
         />
         <input
-          data-cy='num1'
+          data-cy='num2'
           type='number'
           placeholder='0'
           onChange={(e) => setNum2(+e.target.value)}
           value={num2}
         />
       </div>
-      <button onClick={() => Calculate()}>Add Them!</button>
-      <h2>Total:{total}</h2>
+      <button onClick={() => Calculate()} data-cy='add-button'>Add Them!</button>
+      <h2 data-cy='result'>Total:{total}</h2>
     </div>
   );
 };
