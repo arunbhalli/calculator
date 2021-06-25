@@ -14,20 +14,20 @@ const Calculator = () => {
         <input
           type='number'
           placeholder='0'
-          data-cy='num1'
-          onClick={(event) => setNum1(+event.target.value)}
+          onChange={(e) => setNum1(+e.target.value)}
           value={num1}
+          data-cy='num1'
         />
         <input
+          data-cy='num1'
           type='number'
           placeholder='0'
-          data-cy='num2'
-          onClick={(event) => setNum2(+event.target.value)}
+          onChange={(e) => setNum2(+e.target.value)}
           value={num2}
         />
       </div>
-      <button onClick={Calculate}>Add Them!</button>
-      <h2>{total}</h2>
+      <button onClick={() => Calculate()}>Add Them!</button>
+      <h2>Total:{total}</h2>
     </div>
   );
 };
